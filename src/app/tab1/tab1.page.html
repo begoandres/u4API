@@ -1,17 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Interesting quotes to learn new languages 
+      Fun quotes from international authors 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">hey 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-img src="{{icon_url}}" class="quotes-icon"></ion-img>
+  <p>
+    {{ quote }}
+  </p>
+  <ion-button color="success" (click)="newQuote()">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  </ion-button>
 </ion-content>

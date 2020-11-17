@@ -8,13 +8,18 @@ import { U4Service} from '../u4.service';
 })
 export class Tab1Page {
 
-  constructor( public quote: U4Service) {
+  icon_url: string;
+  quote: string;
+
+  constructor( public quotePark: U4Service) {
     this.newQuote();
   }
 
   newQuote(){
-    this.quote.getQuote().subscribe( data => {
+    this.quotePark.getQuote().subscribe( data => {
       console.log(data);
+      this.icon_url = data.icon_url;
+      this.quote = data.value;
     })
   }
 
